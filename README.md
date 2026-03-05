@@ -14,11 +14,12 @@ This project features a comprehensive automated testing suite for the **Restful-
 * Automate the end-to-end flow of booking management.
 * Implement dynamic data persistence using Postman Environment Variables.
 * Validate API resilience through negative testing and edge-case discovery.
+* Generate a complete report using Newman.
 
 ## 🛠️ Tech Stack
 * **Tool:** Postman
 * **Scripting:** JavaScript (Postman Sandbox)
-* **Reporting:** Postman Collection Runner
+* **Reporting:** Postman Collection Runner and/or Newman
 
 ## 📂 Suite Structure
 1. **01 - Health Check**: Verifies if the service is up.
@@ -40,8 +41,19 @@ This project features a comprehensive automated testing suite for the **Restful-
 3. Select the `Restful-Booker-Prod` environment.
 4. Open the **Collection Runner** and click **Run Restful-Booker**.
 
-## Test Report
-<img width="1436" height="961" alt="image" src="https://github.com/user-attachments/assets/c25d3439-49b8-4efd-8521-9f22d0aaba5d" />
+## 📊 Test Report
+<img width="1129" height="910" alt="image" src="https://github.com/user-attachments/assets/39ae3bca-8038-4855-8cca-f15f73f6d650" />
+To check the ful report you can either download it from the "newman" folder or follow the steps to generate it yourself.
+
+## 🤓 How to Generate Newman Report
+This project utilizes **Newman** and **htmlextra** to generate visual test reports.
+
+1. **Install Dependencies:**
+   `npm install -g newman newman-reporter-htmlextra`
+
+2. **Generate Report:**
+   `newman run postman/collection.json -e postman/environment.json -r htmlextra --reporter-htmlextra-title "Restful-Booker Regression Report" --reporter-htmlextra-browserTitle "QA Automation Report"`
+
 
 ---
 
@@ -52,11 +64,12 @@ Este projeto apresenta uma suíte abrangente de testes automatizados para a **AP
 * Automatizar o fluxo de ponta a ponta da gestão de reservas.
 * Implementar persistência dinâmica de dados usando Variáveis de Ambiente do Postman.
 * Validar a resiliência da API através de testes negativos e descoberta de casos de borda (edge cases).
+* Gerar um relatório completo utilizando Newman.
 
 ## 🛠️ Tecnologias
 * **Ferramenta:** Postman
 * **Scripting:** JavaScript (Postman Sandbox)
-* **Relatórios:** Postman Collection Runner
+* **Relatórios:** Postman Collection Runner e/ou Newman
 
 ## 📂 Estrutura da Suíte
 1. **01 - Health Check**: Verifica se o serviço está online.
@@ -78,5 +91,15 @@ Este projeto apresenta uma suíte abrangente de testes automatizados para a **AP
 3. Selecione o ambiente `Restful-Booker-Prod`.
 4. Abra o **Collection Runner** e clique em **Run Restful-Booker**.
 
-## Test Report
-<img width="1436" height="961" alt="image" src="https://github.com/user-attachments/assets/c25d3439-49b8-4efd-8521-9f22d0aaba5d" />
+## 📊 Test Report
+<img width="1129" height="910" alt="image" src="https://github.com/user-attachments/assets/39ae3bca-8038-4855-8cca-f15f73f6d650" />
+Para conferir o relatório completo você pode ou baixá-lo da pasta "newman" ou seguir as instruções à seguir para gerá-lo você mesmo.
+
+## 🤓 Como Gerar o Relatório com Newman
+Este projeto utiliza o **Newman** e o **htmlextra** para gerar relatórios visuais dos testes.
+
+1. **Instalar Dependências:**
+   `npm install -g newman newman-reporter-htmlextra`
+
+2. **Gerar Relatório:**
+   `newman run postman/collection.json -e postman/environment.json -r htmlextra --reporter-htmlextra-title "Restful-Booker Regression Report" --reporter-htmlextra-browserTitle "QA Automation Report"`
