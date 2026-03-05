@@ -3,7 +3,7 @@
 
 [Leia em Português<img src="https://flagcdn.com/w20/br.png" width="20">](#versão-em-português) | [Read in English<img src="https://flagcdn.com/w20/us.png" width="20">](#english-version)
 
-# Restful-Booker API Automation Suite
+# Restful-Booker API Automation Suite (CI/CD Ready✅)
 
 ---
 
@@ -19,7 +19,7 @@ This project features a comprehensive automated testing suite for the **Restful-
 ## 🛠️ Tech Stack
 * **Tool:** Postman
 * **Scripting:** JavaScript (Postman Sandbox)
-* **Reporting:** Postman Collection Runner and/or Newman
+* **Reporting:** Postman Collection Runner and/or Newman (CI/CD Ready)
 
 ## 📂 Suite Structure
 1. **01 - Health Check**: Verifies if the service is up.
@@ -43,7 +43,7 @@ This project features a comprehensive automated testing suite for the **Restful-
 
 ## 📊 Test Report
 <img width="1129" height="910" alt="image" src="https://github.com/user-attachments/assets/39ae3bca-8038-4855-8cca-f15f73f6d650" />
-To check the ful report you can either download it from the "newman" folder or follow the steps to generate it yourself.
+To check the full report you can either download it from the "newman" folder or follow the steps to generate it yourself.
 
 ## 🤓 How to Generate Newman Report
 This project utilizes **Newman** and **htmlextra** to generate visual test reports.
@@ -69,7 +69,7 @@ Este projeto apresenta uma suíte abrangente de testes automatizados para a **AP
 ## 🛠️ Tecnologias
 * **Ferramenta:** Postman
 * **Scripting:** JavaScript (Postman Sandbox)
-* **Relatórios:** Postman Collection Runner e/ou Newman
+* **Relatórios:** Postman Collection Runner e/ou Newman (CI/CD Ready)
 
 ## 📂 Estrutura da Suíte
 1. **01 - Health Check**: Verifica se o serviço está online.
