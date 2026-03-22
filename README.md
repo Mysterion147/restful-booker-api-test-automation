@@ -1,3 +1,5 @@
+[![Postman API Tests](https://github.com/Mysterion147/restful-booker-api-test-automation/actions/workflows/api-tests.yml/badge.svg)](https://github.com/Mysterion147/restful-booker-api-test-automation/actions/workflows/api-tests.yml)
+
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
