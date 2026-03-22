@@ -10,6 +10,26 @@
 ## English Version
 This project features a comprehensive automated testing suite for the **Restful-Booker API**. It demonstrates a robust CRUD lifecycle, security validation, and advanced error-handling scenarios.
 
+## ⚙️ CI/CD & Automated Reporting
+This project is fully integrated with **GitHub Actions** to perform automated API regression testing on every push (excluding documentation changes).
+
+* **Continuous Testing (CT):** The pipeline automatically installs dependencies, executes the Postman collection via **Newman**, and validates all assertions.
+* **Automated Delivery:** After execution, a professional HTML report is generated using `htmlextra` and automatically deployed to **GitHub Pages**.
+
+### 📊 Live Test Report
+You can access the latest automated execution dashboard here:
+[**View Live Restful-Booker Report 📈**](https://mysterion147.github.io/restful-booker-api-test-automation/api-tests/)
+
+## 🤓 Manual Execution (Newman)
+If you wish to run the suite locally and generate the report manually:
+
+1. **Install Dependencies:**
+   ```bash
+   npm install -g newman newman-reporter-htmlextra
+2. **Generate Report:**
+   ```bash
+   newman run postman/collection.json -e postman/environment.json -r htmlextra --reporter-htmlextra-title "Restful-Booker Regression Report"
+
 ## Project Goals
 * Automate the end-to-end flow of booking management.
 * Implement dynamic data persistence using Postman Environment Variables.
@@ -35,30 +55,37 @@ This project features a comprehensive automated testing suite for the **Restful-
 * **Status Code Discovery**: During testing, I identified that the API returns a `405 Method Not Allowed` when attempting to delete a resource that has already been removed, rather than the traditional `404`. This was documented and integrated into the test assertions.
 * **Dynamic Variables**: The suite is designed to be "zero-config." All IDs and tokens are passed between requests automatically via environment variables.
 
-## 🚀 How to Run
+## 🚀 How to Run Locally
 1. Clone this repository.
 2. Import the files from the `/postman` folder into your Postman Workspace.
 3. Select the `Restful-Booker-Prod` environment.
 4. Open the **Collection Runner** and click **Run Restful-Booker**.
-
-## 📊 Test Report
-<img width="1129" height="910" alt="image" src="https://github.com/user-attachments/assets/39ae3bca-8038-4855-8cca-f15f73f6d650" />
-To check the full report you can either download it from the "newman" folder or follow the steps to generate it yourself.
-
-## 🤓 How to Generate Newman Report
-This project utilizes **Newman** and **htmlextra** to generate visual test reports.
-
-1. **Install Dependencies:**
-   `npm install -g newman newman-reporter-htmlextra`
-
-2. **Generate Report:**
-   `newman run postman/collection.json -e postman/environment.json -r htmlextra --reporter-htmlextra-title "Restful-Booker Regression Report" --reporter-htmlextra-browserTitle "QA Automation Report"`
 
 
 ---
 
 ## Versão em Português
 Este projeto apresenta uma suíte abrangente de testes automatizados para a **API Restful-Booker**. Ele demonstra um ciclo de vida CRUD robusto, validação de segurança e cenários avançados de tratamento de erros.
+
+## ⚙️ CI/CD & Relatórios Automatizados
+Este projeto é totalmente integrado ao **GitHub Actions** para realizar testes de regressão de API de forma automatizada a cada push (ignorando alterações apenas em documentação).
+
+* **Teste Contínuo (CT):** O pipeline instala dependências, executa a collection do Postman via **Newman** e valida todas as asserções automaticamente.
+* **Entrega Automatizada:** Após a execução, um relatório HTML profissional é gerado via `htmlextra` e publicado automaticamente no **GitHub Pages**.
+
+### 📊 Relatório de Testes (Ao Vivo)
+Você pode acessar o dashboard da última execução automatizada aqui:
+[**Visualizar Relatório Restful-Booker 📈**](https://mysterion147.github.io/restful-booker-api-test-automation/api-tests/)
+
+## 🤓 Execução Manual (Newman)
+Caso deseje rodar a suíte localmente e gerar o relatório manualmente:
+
+1. **Instale as Dependências:**
+   ```bash
+   npm install -g newman newman-reporter-htmlextra
+2. **Gere o Relatorio:**
+   ```bash
+   newman run postman/collection.json -e postman/environment.json -r htmlextra --reporter-htmlextra-title "Restful-Booker Regression Report"
 
 ## Objetivos do Projeto
 * Automatizar o fluxo de ponta a ponta da gestão de reservas.
@@ -85,21 +112,8 @@ Este projeto apresenta uma suíte abrangente de testes automatizados para a **AP
 * **Descoberta de Status Code**: Durante os testes, identifiquei que a API retorna `405 Method Not Allowed` ao tentar excluir um recurso que já foi removido, em vez do tradicional `404`. Isso foi documentado e integrado às asserções de teste.
 * **Variáveis Dinâmicas**: A suíte foi projetada para ser "zero-config". Todos os IDs e tokens são passados entre as requisições automaticamente via variáveis de ambiente.
 
-## 🚀 Como Executar
+## 🚀 Como Executar Localmente
 1. Clone este repositório.
 2. Importe os arquivos da pasta `/postman` para o seu Workspace do Postman.
 3. Selecione o ambiente `Restful-Booker-Prod`.
 4. Abra o **Collection Runner** e clique em **Run Restful-Booker**.
-
-## 📊 Test Report
-<img width="1129" height="910" alt="image" src="https://github.com/user-attachments/assets/39ae3bca-8038-4855-8cca-f15f73f6d650" />
-Para conferir o relatório completo você pode ou baixá-lo da pasta "newman" ou seguir as instruções à seguir para gerá-lo você mesmo.
-
-## 🤓 Como Gerar o Relatório com Newman
-Este projeto utiliza o **Newman** e o **htmlextra** para gerar relatórios visuais dos testes.
-
-1. **Instalar Dependências:**
-   `npm install -g newman newman-reporter-htmlextra`
-
-2. **Gerar Relatório:**
-   `newman run postman/collection.json -e postman/environment.json -r htmlextra --reporter-htmlextra-title "Restful-Booker Regression Report" --reporter-htmlextra-browserTitle "QA Automation Report"`
